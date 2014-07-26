@@ -1,5 +1,6 @@
-RewriteEngine On
+RewriteEngine on
 RewriteBase /
 
-RewriteCond %{REQUEST_URI} !^/(index\.html)?$ [NC]
-RewriteRule ^.*$ /index.html [L,R=301]
+RewriteCond %{REQUEST_URI} !offline.html
+RewriteRule .* http://www.example.isc/index.html [R=307,L]
+RewriteRule .* http://isc-host.github.io/example.isc/index.html [R=307,L]
